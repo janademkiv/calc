@@ -100,40 +100,40 @@ public class Main {
 
 
         //вызов метода арифметической операции
-        if (operattion.contains("+")) {
-            System.out.println(answerInt(u, w));
-        } else if (operattion.contains("-")){
-            System.out.println(answerInt4(u, w));
-        } else if (operattion.contains("*")) {
-            System.out.println(answerInt2(u, w));
-        } else if (operattion.contains("/")) {
-            System.out.println(answerInt3(u, w));
-        } else {
-            System.out.println("Несоответсвующая арифметическая операция.");
-        }
+//        if (operattion.contains("+")) {
+//            System.out.println(answerInt(u, w));
+//        } else if (operattion.contains("-")){
+//            System.out.println(answerInt4(u, w));
+//        } else if (operattion.contains("*")) {
+//            System.out.println(answerInt2(u, w));
+//        } else if (operattion.contains("/")) {
+//            System.out.println(answerInt3(u, w));
+//        } else {
+//            System.out.println("Несоответсвующая арифметическая операция.");
+//        }
 
-
+        //RomanNumerals(11);
 
     }
 
 
     //арифметические методы
-    public static int answerInt(int a, int b){
+    public  int answerInt(int a, int b){
 
         return a + b;
     }
 
-    public static int answerInt2(int a, int b){
+    public  int answerInt2(int a, int b){
 
         return a * b;
     }
 
-    public static int answerInt3(int a, int b){
+    public  int answerInt3(int a, int b){
 
         return a / b;
     }
 
-    public static int answerInt4(int a, int b){
+    public  int answerInt4(int a, int b){
 
         return a - b;
     }
