@@ -12,24 +12,29 @@ abstract class Calc {
         //разделение строки по арифметич. знаку
         String [] parts = expression.replace(" ","").split(Pattern.quote(operation));
 
+
         int a = strToInt(parts[0]); //присваеваем строке элемент массива 0
         int b = strToInt(parts[1]); //присваеваем строке элемент массива 1
 
-        // исходя из полученного символа, вызывается нажная нам арифм. операц.
-        switch (operation) {
-            case "+":
-                return intToStr(plus(a, b));
-            case "-":
-                return intToStr(minus(a, b));
-            case "*":
-                return intToStr(multiply(a, b));
-            case "/":
-                return intToStr(division(a, b));
-            default:
-                throw new RuntimeException("Несоответсвующая арифметическая операция.");
+        //проверяем введеные числа на диапозон от 1 до 10
+        if (a >= 1 && a <= 10 && b >= 1 && b <= 10) {
+            // исходя из полученного символа, вызывается нажная нам арифм. операц.  и получаем ответ
+            switch (operation) {
+                case "+":
+                    return intToStr(plus(a, b));
+                case "-":
+                    return intToStr(minus(a, b));
+                case "*":
+                    return intToStr(multiply(a, b));
+                case "/":
+                    return intToStr(division(a, b));
+                default:
+                    throw new RuntimeException("Несоответсвующая арифметическая операция.");
+            }
+        } else {
+            throw new IllegalArgumentException("Введен неверный диапозон чисел.");
         }
 
-        
     }
 
     //проверяем, содержит ли введеная строка символ арифметической операции
@@ -69,7 +74,7 @@ abstract class Calc {
     }
 
 
-    //абстрактный метод для конвертации данных.
+    //абстрактный метод для конвертации данных(полученое число после арифм. операц.).
     protected abstract int strToInt(String s);
     protected abstract String intToStr(int s);
 }

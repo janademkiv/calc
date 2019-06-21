@@ -8,7 +8,8 @@ import java.util.*;
 public class Arabic extends Calc {
     @Override
     protected int strToInt(String s) {
-        return Integer.parseInt(s);
+            return Integer.parseInt(s);
+
     }
 
     @Override
