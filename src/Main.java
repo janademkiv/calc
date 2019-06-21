@@ -19,12 +19,12 @@ public class Main {
             try {
 
                 System.out.println(arabic.calculate(s));
+            } catch (NumberFormatException e) {
+
+                System.out.println(roman.calculate(s));
             } catch (IllegalArgumentException e) {
 
                 System.out.println("Введен неверный диапозон чисел.MAIN");
-            } catch (Exception e) {
-
-                System.out.println(roman.calculate(s));
             }
 
         }
