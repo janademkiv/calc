@@ -24,7 +24,7 @@ public class Main {
                 System.out.println(roman.calculate(s));
             } catch (IllegalArgumentException e) {
 
-                System.out.println("Введен неверный диапозон чисел.MAIN");
+                throw new IllegalArgumentException("Введен неверный диапозон чисел.MAIN");
             }
 
         }
