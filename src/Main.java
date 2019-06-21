@@ -14,11 +14,11 @@ public class Main {
             String s = reader.readLine();
 
             try {
-                int calculate = arabic.calculate(s);
-                System.out.println(arabic.intToStr(calculate));
+
+                System.out.println(arabic.calculate(s));
             } catch (Exception e) {
-                int calculate = roman.calculate(s);
-                System.out.println(roman.intToStr(calculate));
+
+                System.out.println(roman.calculate(s));
             }
         }
 

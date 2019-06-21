@@ -3,7 +3,7 @@ import java.util.regex.Pattern;
 abstract class Calc {
 
     //
-    public int calculate(String expression) {
+    public String calculate(String expression) {
 
         //получаем символ арифметической операции
         String operation = getOperation(expression);
@@ -18,16 +18,18 @@ abstract class Calc {
         // исходя из полученного символа, вызывается нажная нам арифм. операц.
         switch (operation) {
             case "+":
-                return plus(a, b);
+                return intToStr(plus(a, b));
             case "-":
-                return minus(a, b);
+                return intToStr(minus(a, b));
             case "*":
-                return multiply(a, b);
+                return intToStr(multiply(a, b));
             case "/":
-                return division(a, b);
+                return intToStr(division(a, b));
             default:
                 throw new RuntimeException("Несоответсвующая арифметическая операция.");
         }
+
+        
     }
 
     //проверяем, содержит ли введеная строка символ арифметической операции
@@ -44,7 +46,6 @@ abstract class Calc {
             throw new RuntimeException("Несоответсвующая арифметическая операция.");
         }
 
-        
     }
 
     protected int plus(int a, int b){
