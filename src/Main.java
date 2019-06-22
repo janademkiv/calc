@@ -22,9 +22,6 @@ public class Main {
             } catch (NumberFormatException e) {
 
                 System.out.println(roman.calculate(s));
-            } catch (IllegalArgumentException e) {
-
-                throw new IllegalArgumentException("Введен неверный диапозон чисел.MAIN");
             }
 
         }
